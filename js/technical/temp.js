@@ -11,7 +11,7 @@ var activeFunctions = [
 	"effectDescription", "display", "fullDisplay", "effectDisplay", "rewardDisplay",
 	"tabFormat", "content",
 	"onComplete", "onPurchase", "onEnter", "onExit", "done",
-	"getUnlocked", "getStyle", "getCanClick", "getTitle", "getDisplay"
+	"getUnlocked", "getStyle", "getCanClick", "getTitle", "getDisplay", "getEffect"
 ]
 
 var noCall = doNotCallTheseFunctionsEveryTick
@@ -84,7 +84,6 @@ function setupTempData(layerData, tmpData, funcsData) {
 	}	
 }
 
-
 function updateTemp() {
 	if (tmp === undefined)
 		setupTemp()
@@ -99,7 +98,6 @@ function updateTemp() {
 		tmp[layer].trueGlowColor = tmp[layer].glowColor
 		tmp[layer].notify = shouldNotify(layer)
 		tmp[layer].prestigeNotify = prestigeNotify(layer)
-
 	}
 
 	tmp.pointGen = getPointGen()
@@ -122,7 +120,6 @@ function updateTempData(layerData, tmpData, funcsData, useThis) {
 		}
 		else if (isFunction(layerData[item]) && !isFunction(tmpData[item])){
 			let value
-
 			if (useThis !== undefined) value = layerData[item].bind(useThis)()
 			else value = layerData[item]()
 			Vue.set(tmpData, item, value)
