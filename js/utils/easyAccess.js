@@ -57,7 +57,13 @@ function upgradeEffect(layer, id) {
 function challengeEffect(layer, id) {
 	return (tmp[layer].challenges[id].rewardEffect)
 }
+function challengeNerf(layer, id) {
+	return (tmp[layer].challenges[id].powers)
+}
 
+function challengeNerf2(layer, id) {
+	return (tmp[layer].challenges[id].powers2)
+}
 function buyableEffect(layer, id) {
 	return (tmp[layer].buyables[id].effect)
 }

@@ -42,6 +42,11 @@ td {
 	margin: 0 auto;
 }
 
+.currentRow {
+	color: #0019fc; 
+	text-shadow: #0019fc 0px 0px 10px;
+}
+
 .upgRow {
 	display: flex !important;
 	flex-flow: row wrap;
